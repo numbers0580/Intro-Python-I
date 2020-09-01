@@ -29,9 +29,14 @@ print(x)
 
 # Print the length of list x
 # YOUR CODE HERE
-print(len(x))
+print("length of x:", len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+print("[", end="")
 for i in x:
-    print(i * 1000)
+    print(i * 1000, end="")
+    if i != x[len(x) - 1]:
+        print(", ", end="")
+    else:
+        print("]")
