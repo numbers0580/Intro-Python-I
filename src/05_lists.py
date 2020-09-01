@@ -19,7 +19,7 @@ print(x)
 # Change x so that it is [1, 2, 3, 4, 9, 10]
 # YOUR CODE HERE
 x.pop(4)
-# also, x.remove(9) worked, too
+# also, x.remove(8) worked, too
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]

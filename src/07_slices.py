@@ -12,10 +12,10 @@ Use Python's slice syntax to achieve the following:
 a = [2, 4, 1, 7, 9, 6]
 
 # Output the second element: 4:
-print(a[1])
+print(a[1:2])
 
 # Output the second-to-last element: 9
-print(a[len(a) - 2]) # this is effectively print(a[4]), but written for any length of array of at least size 2
+print(a[len(a) - 2:len(a) - 1]) # this is effectively print(a[4]), but written for any length of array of at least size 2
 
 # Output the last three elements in the array: [7, 9, 6]
 print(a[len(a) - 3:]) # this is effectively print(a[3:]), but I wrote the code for all possible sizes of arrays of at least 3

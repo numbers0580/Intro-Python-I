@@ -30,3 +30,36 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+# found: x = datetime.datetime(2020, 5, 17) --> sets a date of 05-17-2020 to x
+# found: y = datetime.datetime.today() --> sets a date if 09-01-2020 (as of this writing) to y
+# found: print(y.month) would return 9
+# found: print(x.day) would return 17
+# found: print(y.year) would return 2020
+# found: print(x.strftime("%B")) would convert 5 to May (full name of month)
+# found: print(x.strftime("%b")) would convert 5 to May (short name of month)
+
+def showdate(month, year):
+    if(month is '0'):
+        mth = datetime.today()
+        print("Month:", mth.strftime("%B"))
+    else:
+        mth = datetime(2020, int(month), 1)
+        print("Month:", mth.strftime("%B"))
+
+    if(year is '0'):
+        print("Year:", datetime.today().year)
+    else:
+        print("Year:", year)
+
+if __name__ == "__main__":
+    # print("Total Arguments:", len(sys.argv))
+    # argument 0 should be the file name called
+    # argument 1 should be the month
+    # argument 2 should be the year
+    if(len(sys.argv) >= 3):
+        showdate(sys.argv[1], sys.argv[2])
+    elif(len(sys.argv) == 2):
+        showdate(sys.argv[1], '0')
+    else:
+        showdate('0', '0')
