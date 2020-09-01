@@ -10,20 +10,20 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
+y = [i for i in range(1, 6)]
 
-for i in range(1, 6):
-    y.append(i)
+#for i in range(1, 6):
+#    y.append(i)
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
+y = [i**3 for i in range(10)]
 
-for i in range(10):
-    y.append(i**3)
+#for i in range(10):
+#    y.append(i**3)
 
 print(y)
 
@@ -32,10 +32,10 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = [] # Class Notes: y = [name.upper() for name in a]
+y = [i.upper() for i in a] # Class Notes: y = [name.upper() for name in a]
 
-for i in a:
-    y.append(i.upper()) # This stems from the class notes above
+#for i in a:
+#    y.append(i.upper()) # This stems from the class notes above
 
 print(y)
 
