@@ -53,8 +53,21 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(a, b):
-    print("key: a, value:", a, "\nkey: b, value:", b)
+def f4(a=0, b=0, city="", population=0, founded="", monster="", hp=0):
+    if(a > 0):
+        print("key: a, value:", a)
+    if(b > 0):
+        print("key: b, value:", b)
+    if(len(city) > 0):
+        print("key: city, value:", city)
+    if(population > 0):
+        print("key: population, value:", population)
+    if(len(founded) > 0):
+        print("key: founded, value:", founded)
+    if(len(monster) > 0):
+        print("key: monster, value:", monster)
+    if(hp > 0):
+        print("key: hp, value:", hp)
 
 # Should print
 # key: a, value: 12
